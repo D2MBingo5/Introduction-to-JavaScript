@@ -15,8 +15,12 @@ Do the following:
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
 
-   HINT: no function required
+   HINT: no function required  
 */
+let votingAge = 18;
+if (votingAge >= 18){
+  console.log('true')
+}
 
 
 
@@ -30,8 +34,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let num1 = 15;
+let num2 = 30;
+if (num1 !== num2){
+  num1 = num2;
+}
+console.log(num1);
 
 
 
@@ -45,7 +53,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let year = "1999";
+Number(year);
+console.log(year);
 
 
 
@@ -58,10 +68,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
+function multiply(a, b){
     /*add your code here*/
+    return a*b;
   }
-
+console.log(multiply(3,4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
