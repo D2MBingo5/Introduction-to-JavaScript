@@ -161,36 +161,30 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let randNum = Math.random();
+let computer = Math.random();
+
+if(computer <= 0.34){
+  computer = 'rock';
+} else if(computer <= 0.67){
+  computer = 'paper';
+} else if(computer > 0.67){
+  computer = 'scissors';
+}
 
 function game(user, computer){
-  
-    if (randNum <= 0.333){
-      computer = 'scissors';
-    } else if (randNum <= 0.666 && randNum > 0.333){
-      computer = 'paper';
-    } else {
-      computer = 'rock';
-    }
-    if(user == computer){
-      return("it's a tie")
-    }  if(user === 'rock' && computer === 'paper'){
-      return('you lose!');
-    } else if(user === 'rock' && computer === 'scissors'){
-      return('you win!');
-    } else if(user === 'paper' && computer === 'scissors'){
-      return('you lose!');
-    } else if(user === 'paper' && computer === 'rock'){
-      return('you win!');
-    } else if(user === 'scissors' && computer === 'paper'){
-      return('you win!');
-    } else if(user === 'scissors' && computer === 'rock'){
-      return('you lose!');
-    } else {
-      return('invalid');
-    }
+  if (user === computer){
+    return `it's a tie`;
+  } else if (user === 'rock' && computer === 'scissors'){
+    return `you win!`;
+  } else if (user === 'paper' && computer === 'rock'){
+    return `you win!`;
+  } else if (user === 'scissors' && computer === 'paper'){
+    return `you win!`;
+  } else {
+    return `you lose!`;
+  }
 }
-console.log(game('scissors', randNum))
+
   
   
 
@@ -201,7 +195,7 @@ console.log(game('scissors', randNum))
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
 
@@ -237,8 +231,9 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(bottles){  
-
+  for(let i = bottles; i > 0; i--){
       return(`${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${bottles - 1} bottles of soda on the wall`);
+  }
       
 }
 console.log(annoyingSong(7));
